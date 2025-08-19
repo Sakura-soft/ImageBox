@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: '*',
+    origin: 'https://imagebox-six.vercel.app',
     credentials: true,
   })
 );
@@ -26,7 +26,6 @@ app.use(cookieParser());
 app.use(express.static('public'));
 
 // routes
-
 app.use('/api/v1/user', userRouter);
 
 app.use('/api/v1/folder', folderRouter);
