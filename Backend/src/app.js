@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: 'https://imagebox-six.vercel.app',
+    origin: '*',
     credentials: true,
   })
 );
