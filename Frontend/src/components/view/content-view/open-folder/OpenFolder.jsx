@@ -53,6 +53,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { frontendUrl } from "@/const/const";
 
 const OpenFolder = () => {
   const { folderId } = useParams();
@@ -294,7 +295,7 @@ const OpenFolder = () => {
                   separator: true,
                   onClick: () => {
                     window.open(
-                      `http://localhost:5173/user/folder/${folderId}`,
+                      `${frontendUrl}/user/folder/${folderId}`,
                       "_blank",
                       "noopener,noreferrer"
                     );
