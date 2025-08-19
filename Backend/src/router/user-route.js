@@ -14,6 +14,8 @@ import { auth } from '../middleware/auth.js';
 
 const userRouter = Router();
 
+userRouter.get('/test', (req, res) => res.json({ ok: true }));
+
 userRouter.route('/singup').post(upload.single('profilePhoto'), singup);
 
 userRouter.route('/verifyOtp').post(verifyOtp);
